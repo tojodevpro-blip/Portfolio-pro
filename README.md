@@ -47,6 +47,7 @@ public/
   captures/            Captures WebP des projets
   cv/                  CV au format PDF
   fiches/              Fiches techniques PDF
+  photo.jpg            Portrait carré du hero
 captures/              Captures sources fournies
 cv/                    CV source
 fiches/                Fiches techniques sources
@@ -56,7 +57,7 @@ fiches/                Fiches techniques sources
 
 Le contenu est centralisé dans `src/data/content.ts`.
 
-- `site` : nom, rôle, coordonnées, CV, image Open Graph.
+- `site` : nom, rôle, coordonnées, CV, portrait, image Open Graph.
 - `hero` : accroche, boutons et stack affichée en haut de l'accueil.
 - `projects` : nom, résumé, problème, solution, chiffres, stack, fonctionnalités, liens et images de chaque projet.
 - `skills`, `path`, `method`, `contact` : sections Compétences, Parcours, Méthode et Contact.
@@ -72,6 +73,10 @@ Les liens de démonstration et de vidéo sont masqués quand `demoUrl` ou `video
 4. La galerie de la page projet exclut automatiquement l'image de couverture.
 
 Les captures doivent rester lisibles : préférer des images nettes, sans données personnelles sensibles. Les dimensions exactes évitent les décalages de mise en page.
+
+### Remplacer le portrait
+
+Le portrait du hero est `public/photo.jpg`. Il doit être carré, optimisé et faire moins de 500 Ko. Le texte alternatif se règle avec `site.photoAlt` dans `src/data/content.ts`. Si le fichier est absent, le monogramme `TN` est affiché à la place.
 
 ### Remplacer le CV ou une fiche technique
 
@@ -96,7 +101,7 @@ Les polices sont locales dans `src/fonts/` et chargées avec `next/font/local` d
 
 | Variable | Exemple | Usage |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | `https://portfolio-tojo.vercel.app` | Origine publique du site, sans `basePath` |
+| `NEXT_PUBLIC_SITE_URL` | `https://portfolio-pro-two-khaki.vercel.app` | Origine publique du site, sans `basePath` |
 | `NEXT_PUBLIC_BASE_PATH` | `/portfolio-pro` | Sous-chemin de déploiement, vide par défaut |
 
 Ces variables sont intégrées au moment du build. Il faut donc reconstruire après chaque changement.
@@ -195,4 +200,4 @@ Après un changement de domaine, mettre à jour `NEXT_PUBLIC_SITE_URL` puis reco
 
 - E-mail : tojo.devpro@gmail.com
 - GitHub : [github.com/tojodevpro-blip](https://github.com/tojodevpro-blip)
-- WhatsApp : +261 38 77 29958
+- WhatsApp : +261 38 77 299 58

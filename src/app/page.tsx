@@ -9,10 +9,11 @@ import { ContactSection } from "@/components/home/ContactSection";
 
 export default function HomePage() {
   const hasCv = publicFileExists(site.cv);
+  const hasPhoto = publicFileExists(site.photo);
 
   return (
     <>
-      <Hero hasCv={hasCv} />
+      <Hero hasCv={hasCv} hasPhoto={hasPhoto} />
       <ProjectsSection />
       <SkillsSection />
       <PathSection />

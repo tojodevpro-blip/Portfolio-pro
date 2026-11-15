@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { hero, site } from "@/data/content";
 import { assetPath } from "@/lib/site";
@@ -5,9 +6,10 @@ import { ArrowDown, Download } from "../icons";
 
 type HeroProps = {
   hasCv: boolean;
+  hasPhoto: boolean;
 };
 
-export function Hero({ hasCv }: HeroProps) {
+export function Hero({ hasCv, hasPhoto }: HeroProps) {
   return (
     <section
       aria-labelledby="hero-title"
@@ -86,12 +88,24 @@ export function Hero({ hasCv }: HeroProps) {
           <div className="flex items-start justify-between gap-8 lg:block">
             <div className="relative flex aspect-square w-28 shrink-0 items-center justify-center border border-ink lg:w-full lg:max-w-[240px]">
               <span
-                className="absolute right-3 top-3 h-2 w-2 bg-accent"
+                className="absolute right-3 top-3 z-10 h-2 w-2 bg-accent"
                 aria-hidden="true"
               />
-              <span className="font-serif text-[clamp(2.4rem,5vw,4.5rem)] leading-none tracking-[-0.04em]">
-                {site.monogram}
-              </span>
+              {hasPhoto ? (
+                <Image
+                  src={assetPath(site.photo)}
+                  alt={site.photoAlt}
+                  width={896}
+                  height={896}
+                  priority
+                  sizes="(max-width: 1024px) 112px, 240px"
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <span className="font-serif text-[clamp(2.4rem,5vw,4.5rem)] leading-none tracking-[-0.04em]">
+                  {site.monogram}
+                </span>
+              )}
             </div>
             <div className="lg:mt-10">
               <p className="label text-muted">Disponibilité</p>

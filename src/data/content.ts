@@ -45,10 +45,14 @@ export type Project = {
 };
 
 export const site = {
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-tojo.vercel.app",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://portfolio-pro-two-khaki.vercel.app",
   name: "Tojo Nambinina Randriamifaly",
   shortName: "Tojo Randriamifaly",
   monogram: "TN",
+  photo: "/photo.jpg",
+  photoAlt: "Portrait de Tojo Nambinina Randriamifaly",
   role: "Développeur web junior",
   location: "Antananarivo, Madagascar",
   availability: "Stage ou poste junior",
@@ -61,7 +65,7 @@ export const site = {
   githubLabel: "github.com/tojodevpro-blip",
   whatsapp: {
     url: "https://wa.me/261387729958?text=Bonjour%20Tojo%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio",
-    label: "+261 38 77 29958",
+    label: "+261 38 77 299 58",
   },
   cv: "/cv/CV_Tojo_Randriamifaly.pdf",
   ogImage: "/og.png",

@@ -26,17 +26,19 @@ export function ProjectCover({
 
   if (image) {
     return (
-      <figure className={`cover ${className}`}>
-        <Image
-          src={assetPath(image.src)}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-          priority={priority}
-          className="h-full w-full object-cover"
-          sizes="(max-width: 1024px) 100vw, 60vw"
-        />
-        <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-ink px-5 py-4 text-paper">
+      <figure className={`cover flex flex-col bg-wash ${className}`}>
+        <div className="relative min-h-0 flex-1">
+          <Image
+            src={assetPath(image.src)}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            priority={priority}
+            className="h-full w-full object-contain"
+            sizes="(max-width: 1024px) 100vw, 60vw"
+          />
+        </div>
+        <figcaption className="flex shrink-0 items-end justify-between gap-4 bg-ink px-5 py-4 text-paper">
           <div>
             <p className="label opacity-80">{project.coverKicker}</p>
             <p className="mt-1 font-serif text-2xl leading-none">
@@ -49,14 +51,18 @@ export function ProjectCover({
     );
   }
 
+  const toneClass =
+    project.coverTone === "accent"
+      ? "cover--accent"
+      : project.coverTone === "forest"
+        ? "cover--forest"
+        : "cover--ink";
+
   return (
-    <div
-      className={`cover cover--${project.coverTone} ${className}`}
-      aria-hidden="true"
-    >
+    <div className={`cover ${toneClass} ${className}`} aria-hidden="true">
       <div className="cover-lines" />
       <span className="cover-watermark">{project.index}</span>
-      <div className="relative flex h-full flex-col justify-between p-5 sm:p-7 lg:p-9">
+      <div className="relative z-10 flex h-full flex-col justify-between p-5 sm:p-7 lg:p-9">
         <div className="flex items-start justify-between gap-4">
           <p className="label">{project.index} / 03</p>
           <p className="label text-right">{project.coverKicker}</p>

@@ -126,14 +126,13 @@
     position: absolute;
     right: -0.08em;
     bottom: -0.32em;
-    z-index: -1;
+    z-index: 0;
     font-family: var(--font-fraunces), Georgia, serif;
     font-size: clamp(12rem, 26vw, 24rem);
     line-height: 1;
     letter-spacing: -0.08em;
-    color: transparent;
-    opacity: 0.16;
-    -webkit-text-stroke: 1px currentColor;
+    color: color-mix(in srgb, currentColor 9%, transparent);
+    -webkit-text-stroke: 1px color-mix(in srgb, currentColor 24%, transparent);
     pointer-events: none;
     user-select: none;
   }

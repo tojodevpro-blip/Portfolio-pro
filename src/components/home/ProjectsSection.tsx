@@ -22,9 +22,13 @@ export function ProjectsSection() {
         <div className="space-y-16 lg:space-y-24">
           {projects.map((project, index) => {
             const hasPdf = publicFileExists(project.pdf);
-            const image = project.images.find((item) =>
-              publicFileExists(item.src),
-            );
+            const image = project.coverImage
+              ? project.images.find(
+                  (item) =>
+                    item.src === project.coverImage &&
+                    publicFileExists(item.src),
+                )
+              : undefined;
 
             return (
               <Reveal key={project.slug} delay={index === 0 ? 0 : 60}>

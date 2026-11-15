@@ -47,9 +47,7 @@ export function ProjectCard({
               project={project}
               image={image}
               className={`${
-                featured
-                  ? "aspect-[4/3] lg:aspect-[16/10]"
-                  : "aspect-[4/3]"
+                image ? "aspect-[16/9]" : "aspect-[4/3]"
               } transition-transform duration-500 ease-out motion-safe:group-hover:-translate-y-1.5`}
             />
           </Link>

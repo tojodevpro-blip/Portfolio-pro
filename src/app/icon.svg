@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#F5F1EA"/>
+  <rect x="5.5" y="5.5" width="53" height="53" fill="none" stroke="#14110F" stroke-width="1"/>
+  <rect x="46" y="11" width="7" height="7" fill="#C4501B"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="25" letter-spacing="-1.5" fill="#14110F">TN</text>
+</svg>

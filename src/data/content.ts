@@ -39,6 +39,8 @@ export type Project = {
   videoUrl?: string;
   coverTone: "accent" | "forest" | "ink";
   coverKicker: string;
+  /** Capture utilisée comme couverture. Laissez vide pour la couverture typographique. */
+  coverImage?: string;
   images: ProjectImage[];
 };
 
@@ -165,7 +167,39 @@ export const projects: Project[] = [
     videoUrl: "",
     coverTone: "accent",
     coverKicker: "Gestion scolaire",
-    images: [],
+    coverImage: "/captures/novaskol/1.webp",
+    images: [
+      {
+        src: "/captures/novaskol/1.webp",
+        alt: "Page d'accueil de Novaskol : « Novaskol pour chaque école ».",
+        width: 1600,
+        height: 831,
+      },
+      {
+        src: "/captures/novaskol/2.webp",
+        alt: "Tableau de bord Novaskol d'un établissement, avec effectifs, présences et impayés.",
+        width: 1600,
+        height: 832,
+      },
+      {
+        src: "/captures/novaskol/3.webp",
+        alt: "Écran d'inscription d'un élève dans Novaskol.",
+        width: 1600,
+        height: 832,
+      },
+      {
+        src: "/captures/novaskol/4.webp",
+        alt: "Rapport comptable Novaskol : revenus, dépenses et solde.",
+        width: 1600,
+        height: 826,
+      },
+      {
+        src: "/captures/novaskol/5.webp",
+        alt: "Aperçu d'un bulletin de notes dans Novaskol.",
+        width: 1600,
+        height: 831,
+      },
+    ],
   },
   {
     slug: "bde",
@@ -213,7 +247,39 @@ export const projects: Project[] = [
     videoUrl: "",
     coverTone: "forest",
     coverKicker: "Vie étudiante",
-    images: [],
+    coverImage: "/captures/bde/3.webp",
+    images: [
+      {
+        src: "/captures/bde/1.webp",
+        alt: "Élections du BDE : scrutin en cours et résultats publiés.",
+        width: 1366,
+        height: 650,
+      },
+      {
+        src: "/captures/bde/2.webp",
+        alt: "Gestion des matricules étudiants dans l'administration du BDE.",
+        width: 1366,
+        height: 650,
+      },
+      {
+        src: "/captures/bde/3.webp",
+        alt: "Tableau de bord du BDE avec le scrutin actuel et les actions rapides.",
+        width: 1366,
+        height: 650,
+      },
+      {
+        src: "/captures/bde/4.webp",
+        alt: "Gestion des comptes étudiants du BDE.",
+        width: 1366,
+        height: 650,
+      },
+      {
+        src: "/captures/bde/5.webp",
+        alt: "Validation manuelle des inscriptions au BDE.",
+        width: 1364,
+        height: 611,
+      },
+    ],
   },
   {
     slug: "pointagepro",
@@ -255,7 +321,45 @@ export const projects: Project[] = [
     videoUrl: "",
     coverTone: "ink",
     coverKicker: "Pointage mobile",
-    images: [],
+    coverImage: "/captures/pointagepro/cover.webp",
+    images: [
+      {
+        src: "/captures/pointagepro/cover.webp",
+        alt: "Trois écrans de PointagePro : accueil, scans récents et scan d'un badge.",
+        width: 1600,
+        height: 900,
+      },
+      {
+        src: "/captures/pointagepro/1.webp",
+        alt: "Accueil de PointagePro avec le bouton de scan et les présences du jour.",
+        width: 720,
+        height: 1579,
+      },
+      {
+        src: "/captures/pointagepro/2.webp",
+        alt: "Écran de scan d'un badge QR avec la caméra.",
+        width: 715,
+        height: 1568,
+      },
+      {
+        src: "/captures/pointagepro/3.webp",
+        alt: "Rapport de pointage : répartition des statuts et chronologie.",
+        width: 720,
+        height: 1579,
+      },
+      {
+        src: "/captures/pointagepro/4.webp",
+        alt: "Accueil de PointagePro avec les scans récents d'un employé.",
+        width: 720,
+        height: 1579,
+      },
+      {
+        src: "/captures/pointagepro/5.webp",
+        alt: "Écran de déverrouillage de PointagePro par code PIN ou biométrie.",
+        width: 720,
+        height: 1579,
+      },
+    ],
   },
 ];
 
